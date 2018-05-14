@@ -15,7 +15,7 @@
 
     <div class="container">
         <input type="button" value="Add New Order" class="btn btn-primary"
-                    onclick="window.location.href='add-order.jsp'; return false;"/>
+                    onclick="window.location.href='add-order.jsp'; return false;" disabled="disabled"/>
         <p><p>
 
         <table class="table table-striped table-condensed">
@@ -42,13 +42,15 @@
                         <form class="form-group" action="/OrderServlet" method="GET">
                             <input type="hidden" name="command" value="LOAD">
                             <input type="hidden" name="orderId" value="${tempOrder.orderId}">
-                            <button type="submit" class="btn btn-link">Update</button>
+                            <button type="submit" class="btn btn-link">View Details</button>
                         </form>
-                        <form class="form-group" action="/OrderServlet" method="GET">
+                        <!--
+                        <form class="form-group" action="/OrderServlet" method="POST">
                             <input type="hidden" name="command" value="DELETE">
                             <input type="hidden" name="orderId" value="${tempOrder.orderId}">
-                            <button type="submit" class="btn btn-link">Delete</button>
+                            <button type="submit" class="btn btn-link" disabled="disabled">Delete</button>
                         </form>
+                        -->
                         </div>
                     </td>
                 </tr>

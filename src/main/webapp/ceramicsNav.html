@@ -9,23 +9,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="">Patneau Ceramics</a>
+            <a class="navbar-brand" href="/OrderServlet">Patneau Ceramics</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inventory<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="">Current Inventory</a></li>
-                        <li><a href="/ProductsServlet">View Products</a></li>
-                        <li><a href="/ColorServlet">View Glazes</a></li>
-                    </ul>
-                </li>
                 <li>
                     <a href="/CustomerServlet" role="button">Customers</a>
-
                 </li>
                 <li>
                     <a href="/OrderServlet" role="button">Orders</a>
@@ -33,13 +24,22 @@
                 <li>
                     <a href="/LocationServlet" role="button">Sales Tax Rates</a>
                 </li>
-                <!--<li class="dropdown">-->
-                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Expenses<span class="caret"></span></a>-->
-                    <!--<ul class="dropdown-menu">-->
-                        <!--<li><a href="expenses.html">View Expenses</a></li>-->
-                        <!--<li><a href="newexpense.html">New Expense</a></li>-->
-                    <!--</ul>-->
-                <!--</li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Inventory<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <!--<li><a href="">Current Inventory</a></li> -->
+                        <li><a href="/ProductsServlet">View Products</a></li>
+                        <li><a href="/ColorServlet">View Glazes</a></li>
+                    </ul>
+                </li>
+
+                <!--<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Expenses<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li><a href="expenses.html">View Expenses</a></li>
+                    <li><a href="newexpense.html">New Expense</a></li>
+                    </ul>
+                </li>-->
             </ul>
 
         </div><!-- /.navbar-collapse -->

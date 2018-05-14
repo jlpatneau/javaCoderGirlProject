@@ -30,6 +30,17 @@ public class Location {
         this.locationId = locationId;
     }
 
+    public Location(int locationId, String locationName) {
+        this.locationId = locationId;
+        this.locationName = locationName;
+    }
+
+    public Location(int locationId, String locationName, BigDecimal taxRate) {
+        this.locationId = locationId;
+        this.locationName = locationName;
+        this.taxRate = taxRate;
+    }
+
     public int getLocationId() {
         return locationId;
     }

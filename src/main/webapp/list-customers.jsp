@@ -26,7 +26,7 @@
               </div>
               <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="newMailing"> Receive news?
+                    <input type="checkbox" name="newMailing" id="newMailing"> Receive news?
                   </label>
                 </div>
               <button type="submit" class="btn btn-primary">Save</button>
@@ -62,7 +62,7 @@
                         <form class="form-group" action="" method="GET">
                             <input type="hidden" name="command" value="ADD">
                             <input type="hidden" name="custId" value="${tempCustomer.custId}">
-                            <button type="submit" class="btn btn-primary">New Order</button>
+                            <button type="submit" class="btn btn-primary" disabled="disabled">New Order</button>
                         </form>
                         </div>
                     </td>

@@ -96,19 +96,22 @@ public class OrderServlet extends HttpServlet {
 
     private void loadOrder(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        /*
+
         String theOrderId = request.getParameter("orderId");
         System.out.println("OrderServlet load orderId: " + theOrderId);
 
         //get record from db
         Order theOrder = OrderDbUtil.getOrder(theOrderId);
-
         request.setAttribute("THE_ORDER", theOrder);
+
+        int orderId = Integer.parseInt(request.getParameter("orderId"));
+        List<OrderProduct> orderProduct = OrderDbUtil.getOrderProducts(orderId);
+        request.setAttribute("ORDER_PROD", orderProduct);
 
         //send to update-order.jsp
         RequestDispatcher dispatcher = request.getRequestDispatcher("/update-order.jsp");
         dispatcher.forward(request, response);
-        */
+
     }
 
     private void updateOrder(HttpServletRequest request, HttpServletResponse response) throws Exception {

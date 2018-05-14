@@ -20,6 +20,11 @@ public class Products {
         this.prodId = prodId;
     }
 
+    public Products(int prodId, String prodName) {
+        this.prodId = prodId;
+        this.prodName = prodName;
+    }
+
     public int getProdId() {
         return prodId;
     }

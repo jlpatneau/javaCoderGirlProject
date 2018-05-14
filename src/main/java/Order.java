@@ -6,7 +6,7 @@ public class Order {
     LocalDate orderDate;
     private Customer customer;
     private BigDecimal orderTotalAmt;
-    private int locationId;
+    private Location location;
     private String pymtType;
     private BigDecimal taxableAmt;
     private BigDecimal salesTaxAmt;
@@ -16,12 +16,12 @@ public class Order {
     private String orderNote;
 
 
-    public Order(int orderId, LocalDate orderDate, Customer customer, BigDecimal orderTotalAmt, int locationId, String pymtType, BigDecimal taxableAmt, BigDecimal salesTaxAmt, LocalDate deliveryDate, BigDecimal paidAmt, BigDecimal discountAmt, String orderNote) {
+    public Order(int orderId, LocalDate orderDate, Customer customer, BigDecimal orderTotalAmt, Location location, String pymtType, BigDecimal taxableAmt, BigDecimal salesTaxAmt, LocalDate deliveryDate, BigDecimal paidAmt, BigDecimal discountAmt, String orderNote) {
         this.orderId = orderId;
         this.orderDate = orderDate;
         this.customer = customer;
         this.orderTotalAmt = orderTotalAmt;
-        this.locationId = locationId;
+        this.location = location;
         this.pymtType = pymtType;
         this.taxableAmt = taxableAmt;
         this.salesTaxAmt = salesTaxAmt;
@@ -61,7 +61,6 @@ public class Order {
         this.orderDate = orderDate;
     }
 
-
     public Customer getCustomer() {
         return customer;
     }
@@ -69,7 +68,6 @@ public class Order {
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
-
 
     public BigDecimal getOrderTotalAmt() {
         return orderTotalAmt;
@@ -79,12 +77,12 @@ public class Order {
         this.orderTotalAmt = orderTotalAmt;
     }
 
-    public int getLocationId() {
-        return locationId;
+    public Location getLocation() {
+        return location;
     }
 
-    public void setLocationId(int locationId) {
-        this.locationId = locationId;
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     public String getPymtType() {
