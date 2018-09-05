@@ -4,23 +4,20 @@ import java.time.LocalDate;
 public class Location {
     private int locationId;
     private String locationName;
-    private String locationState;
     private BigDecimal taxRate;
-    LocalDate taxStartDate;
-    LocalDate taxEndDate;
+    private LocalDate taxStartDate;
+    private LocalDate taxEndDate;
 
-    public Location(int locationId, String locationName, String locationState, BigDecimal taxRate, LocalDate taxStartDate, LocalDate taxEndDate) {
+    public Location(int locationId, String locationName, BigDecimal taxRate, LocalDate taxStartDate, LocalDate taxEndDate) {
         this.locationId = locationId;
         this.locationName = locationName;
-        this.locationState = locationState;
         this.taxRate = taxRate;
         this.taxStartDate = taxStartDate;
         this.taxEndDate = taxEndDate;
     }
 
-    public Location(String locationName, String locationState, BigDecimal taxRate, LocalDate taxStartDate, LocalDate taxEndDate) {
+    public Location(String locationName, BigDecimal taxRate, LocalDate taxStartDate, LocalDate taxEndDate) {
         this.locationName = locationName;
-        this.locationState = locationState;
         this.taxRate = taxRate;
         this.taxStartDate = taxStartDate;
         this.taxEndDate = taxEndDate;
@@ -63,14 +60,6 @@ public class Location {
 
     public void setLocationName(String locationName) {
         this.locationName = locationName;
-    }
-
-    public String getLocationState() {
-        return locationState;
-    }
-
-    public void setLocationState(String locationState) {
-        this.locationState = locationState;
     }
 
     public BigDecimal getTaxRate() {

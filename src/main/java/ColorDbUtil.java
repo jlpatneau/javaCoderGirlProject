@@ -14,7 +14,7 @@ public class ColorDbUtil {
     private final String dbDriver = "com.mysql.jdbc.Driver";
     private final String dbConn = "jdbc:mysql://localhost:3306/javaproject?user=patneau&password=patneau";
 
-    public List<Color> getColorList() throws Exception {
+    public static List<Color> getColorList() throws Exception {
 
         List<Color> color = new ArrayList<>();
 
@@ -99,7 +99,7 @@ public class ColorDbUtil {
 
     public Color getColor(String theColorId) throws Exception {
 
-        Color theColor = null;
+        Color theColor;
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet results = null;

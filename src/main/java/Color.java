@@ -11,6 +11,10 @@ public class Color {
         this.colorName = colorName;
     }
 
+    public Color(int colorId) {
+        this.colorId = colorId;
+    }
+
     public int getColorId() {
         return colorId;
     }

@@ -28,8 +28,7 @@
                 <div class="checkbox">
                   <label for="mailing">Recieve News?</label>
                     <input type="checkbox" name="newMailing" id="mailing"
-                        <c:if test="${THE_CUSTOMER.mailing}">checked="checked"</c:if>
-                        />
+                        <c:if test="${THE_CUSTOMER.mailing}">checked="checked"</c:if>  />
                   </div>
               <button type="submit" class="btn btn-primary">Update</button>
         </form>
@@ -41,7 +40,7 @@
 
     </div>
 
-
+<script src="cust-update.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 

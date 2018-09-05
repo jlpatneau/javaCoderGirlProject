@@ -7,7 +7,6 @@ import java.util.List;
 
 public class OrderDbUtil {
 
-
     private DataSource dataSource;
 
     public OrderDbUtil(DataSource dataSource) {
@@ -83,16 +82,16 @@ public class OrderDbUtil {
         }
     }
 
-    public static Order getOrder(String theOrderId) throws Exception {
+    public static Order getOrder(int orderId) throws Exception {
 
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet results = null;
-        Order theOrder = null;
-        int orderId;
+        Order theOrder;
+        //int orderId;
 
         try {
-            orderId = Integer.parseInt(theOrderId);
+
             //System.out.println("integer id: " + orderId);
 
             Class.forName("com.mysql.jdbc.Driver");
@@ -174,7 +173,7 @@ public class OrderDbUtil {
             //System.out.println("orderId: " + orderId);
             results = stmt.executeQuery();
 
-            if (results.next()) {
+            while (results.next()) {
                 int prodId = results.getInt("prod_id");
                 String prodName = results.getString("prod_name");
                 int colorId = results.getInt("color_id");
@@ -193,14 +192,21 @@ public class OrderDbUtil {
                 System.out.println("OrderDB getOrderProduct Color: " + tempOrderProd.getColor().getColorId());
                 orderProducts.add(tempOrderProd);
 
-            } else{
-                throw new Exception("Could not find order_id: " + orderId);
             }
 
             return orderProducts;
         } finally {
             close(conn, stmt, results);
         }
+    }
+
+    public void updateOrderProduct(OrderProduct theOrderProduct) {
+
+
+    }
+
+    public void updateOrder(Order theOrder) {
+
     }
 }
 

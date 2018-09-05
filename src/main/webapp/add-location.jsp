@@ -23,12 +23,6 @@
                 </div>
               </div>
               <div class="form-group">
-                  <label for="newState" class="col-sm-2 control-label">State: </label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="newState" name="newState" placeholder="State">
-                  </div>
-              </div>
-              <div class="form-group">
                 <label for="newTaxRate" class="col-sm-2 control-label">Sales Tax Rate: </label>
                 <div class="col-sm-10">
                 <input type="text" class="form-control" id="newTaxRate" name="newTaxRate" placeholder="Tax Rate">

@@ -33,7 +33,7 @@ public class LocationServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException {
 
         try {
             //read the command parameter
@@ -112,7 +112,6 @@ public class LocationServlet extends HttpServlet {
         System.out.println("updateLocation id: " + theLocationId);
 
         String theLocationName = request.getParameter("newLocation");
-        String theLocationState = request.getParameter("newState");
         BigDecimal theLocationTaxRate = new BigDecimal(request.getParameter("newTaxRate"));
 
         LocalDate theLocationStartDate = LocalDate.parse(request.getParameter("newStartDate"));
@@ -125,7 +124,7 @@ public class LocationServlet extends HttpServlet {
             } else theLocationEndDate = LocalDate.parse(request.getParameter("newEndDate"));
         }
         //get record from db
-        Location theLocation = new Location(theLocationId, theLocationName, theLocationState, theLocationTaxRate, theLocationStartDate, theLocationEndDate);
+        Location theLocation = new Location(theLocationId, theLocationName, theLocationTaxRate, theLocationStartDate, theLocationEndDate);
 
         locationDbUtil.updateLocation(theLocation);
 
@@ -136,7 +135,7 @@ public class LocationServlet extends HttpServlet {
 
         //Read data from form
         String theLocationName = request.getParameter("newLocation");
-        String theLocationState = request.getParameter("newState");
+        System.out.println("tax rate: " + request.getParameter("newTaxRate"));
         BigDecimal theLocationTaxRate = new BigDecimal(request.getParameter("newTaxRate"));
         LocalDate theLocationStartDate = LocalDate.parse(request.getParameter("newStartDate"));
         LocalDate theLocationEndDate = null;
@@ -151,7 +150,7 @@ public class LocationServlet extends HttpServlet {
         }
 
         //create new Location
-        Location newLocation = new Location(theLocationName, theLocationState, theLocationTaxRate, theLocationStartDate, theLocationEndDate);
+        Location newLocation = new Location(theLocationName, theLocationTaxRate, theLocationStartDate, theLocationEndDate);
 
         //add to DB
         LocationDbUtil.addLocation(newLocation);
@@ -163,7 +162,7 @@ public class LocationServlet extends HttpServlet {
 
     private void listLocations(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
-        List<Location> locations = locationDbUtil.listLocations();
+        List<Location> locations = LocationDbUtil.listLocations();
 
         request.setAttribute("LOCATION_LIST", locations);
 

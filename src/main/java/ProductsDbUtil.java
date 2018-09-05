@@ -12,7 +12,7 @@ public class ProductsDbUtil {
         this.dataSource = dataSource;
     }
 
-    public List<Products> getProducts() throws Exception {
+    public static List<Products> getProducts() throws Exception {
 
         List<Products> products = new ArrayList<>();
 

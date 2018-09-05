@@ -21,7 +21,6 @@
         <table class="table table-striped table-condensed">
             <tr>
                 <th>Location Name</th>
-                <th>State</th>
                 <th>Tax rate</th>
                 <th>Start date</th>
                 <th>End date</th>
@@ -31,7 +30,6 @@
 
                 <tr>
                     <td>${tempLocation.locationName}</td>
-                    <td>${tempLocation.locationState}</td>
                     <td>${tempLocation.taxRate}</td>
                     <td>${tempLocation.taxStartDate}</td>
                     <td>${tempLocation.taxEndDate}</td>

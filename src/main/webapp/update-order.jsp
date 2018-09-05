@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="ceramics.css" type="text/css">
-
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="add-order.js"></script>
 </head>
 
 <body>
@@ -100,7 +101,7 @@
                                     <input type="text" name="price" class="form-control" value="${tempOrderProduct.salePrice}" />
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" disabled="disabled">Update Item</button>
+                                    <button type="submit" class="btn btn-primary" disabled="disabled"> Update Item</button>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -122,7 +123,11 @@
 
     </div>
 
-<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<!--
+<script>
+    $("#mydropdownlist").val("thevalue");
+</script>
+-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
